@@ -1,11 +1,18 @@
 import { FigureContainer } from './styles'
 
-export function Figure() {
+interface FigureProps {
+  changeShow: () => void
+}
+
+export function Figure({ changeShow }: FigureProps) {
   return (
     <FigureContainer>
       <div />
-      <h1>João Naif</h1>
-      <span>Desenvolvedor Software</span>
+      <section>
+        <h1>João Naif</h1>
+        <span>Desenvolvedor Software</span>
+      </section>
+      <aside onClick={changeShow}>Mostrar Contatos</aside>
     </FigureContainer>
   )
 }

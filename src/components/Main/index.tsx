@@ -15,7 +15,7 @@ export function Main() {
 
   return (
     <MainContainer>
-      <Menu changeOption={changeOption} />
+      <Menu changeOption={changeOption} option={option} />
       {option === 1 && <About />}
       {option === 2 && <Resume />}
       {option === 3 && <Portifolio />}

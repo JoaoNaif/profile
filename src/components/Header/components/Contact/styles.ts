@@ -7,6 +7,14 @@ export const ContactContainer = styled.div`
 
   border-top: 1px solid ${(props) => props.theme['gray-600']};
   padding-top: 1rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 425px) {
+    padding: 1rem;
+  }
 `
 
 export const InfoList = styled.ul`
@@ -17,6 +25,19 @@ export const InfoList = styled.ul`
   gap: 2rem;
 
   list-style: none;
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid ${(props) => props.theme['gray-600']};
+  }
+
+  @media (max-width: 425px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 export const SocialList = styled.ul`
   display: flex;
@@ -36,5 +57,9 @@ export const SocialList = styled.ul`
         transition: background-color 1s;
       }
     }
+  }
+
+  @media (max-width: 1024px) {
+    justify-content: start;
   }
 `
